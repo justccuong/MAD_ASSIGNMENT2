@@ -40,11 +40,11 @@ q13(100, 90, 80)
 
 def q14(n):
     dn = 3 ** n + 1
-    for i in range(1, n):
-        dn -= n - i
+    for i in range(2, n):
+        dn -= (n - i + 1) * (2 ** (n - i))
+    dn -= 1     
     print(f"Q1.4. ", end = "")
     return modulo(dn, 1, 9999)
-q14(1000)
 
 def q15(n):
     if n == 1:
