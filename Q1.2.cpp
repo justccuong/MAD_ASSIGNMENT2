@@ -1,3 +1,5 @@
+// phan tu 1000 la 3 ^ 500, kq ra 2223! 
+
 #include <iostream>
 
 using namespace std;
