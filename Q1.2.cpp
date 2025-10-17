@@ -4,10 +4,17 @@ using namespace std;
 
 
 int find_s_n(int n) {
-    if (n == 0) return 1;
-    if (n == 1) return 1;
-    if (n == 2) return 1;
-    else return ((find_s_n(n / 2) * 3 % 9999) + ((n  % 2) * 3 % 9999));
+    if (n < 0) return 0;
+    if (n == 0) return 1; 
+
+    int so_chu = (n + 1) / 2;
+
+    long long kq = 1;
+    for (int i = 0; i < so_chu; i++) {
+        kq = (kq * 3) % 9999;
+    }
+
+    return kq;
 }
 
 void bonus() {
